@@ -17,7 +17,7 @@ public class FootBallScoreBound {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ScoreSource source = new ScoreSource();
+        LiveScoreBean source = new LiveScoreBean();
         Subscriber sub1 = new Subscriber(1);
         Subscriber sub2 = new Subscriber(2);
         source.addPropertyChangeListener(sub1);
@@ -33,7 +33,7 @@ public class FootBallScoreBound {
                 break;
             }
             else {
-                source.setScore(resultScore);
+                source.setScoreLine(resultScore);
                 }
             }
     }

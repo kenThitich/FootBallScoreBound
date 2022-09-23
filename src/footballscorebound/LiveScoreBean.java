@@ -12,26 +12,26 @@ import java.io.Serializable;
  *
  * @author TUFGAMING
  */
-public class ScoreSource implements Serializable {
+public class LiveScoreBean implements Serializable {
     
-    public static final String SCORE_PROPERTY = "score";
+    public static final String SCORELINE_PROPERTY = "scoreLine";
     
-    private String score;
+    private String scoreLine;
     
     private PropertyChangeSupport propertySupport;
     
-    public ScoreSource() {
+    public LiveScoreBean() {
         propertySupport = new PropertyChangeSupport(this);
     }
     
-    public String getScore() {
-        return score;
+    public String getScoreLine() {
+        return scoreLine;
     }
     
-    public void setScore(String value) {
-        String oldScore = score;
-        score = value;
-        propertySupport.firePropertyChange(SCORE_PROPERTY, oldScore, score);
+    public void setScoreLine(String value) {
+        String oldScore = scoreLine;
+        scoreLine = value;
+        propertySupport.firePropertyChange(SCORELINE_PROPERTY, oldScore, scoreLine);
     }
     
     public void addPropertyChangeListener(PropertyChangeListener listener) {
